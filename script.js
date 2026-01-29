@@ -1,5 +1,6 @@
 const buttonList = document.querySelectorAll(`input[type="button"]`)
 let p = document.getElementById('output')
+let previous = document.getElementById('previous')
 let opeazione = ""
 const spec = "+-*/"
 const spec2 = "+*/"
@@ -73,5 +74,6 @@ function cancella() {
 }
 
 function calcola() {
-    p.value = math.evaluate(p.value)
+    previous.value = p.value
+    p.value = "= "+math.evaluate(p.value)
 }
