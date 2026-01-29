@@ -73,5 +73,5 @@ function cancella() {
 }
 
 function calcola() {
-    p.value = eval(p.value)
+    p.value = math.evaluate(p.value)
 }
