@@ -60,9 +60,9 @@ function immissione(dato) {
             calcola()
             break
         default:
-            if (p.textContent === "0") {
+            if (p.value =="0") {
                 p.value = dato
-            } else {
+            }else {
                 p.value += dato
             }
     }
