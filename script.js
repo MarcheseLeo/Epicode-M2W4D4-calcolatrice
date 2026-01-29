@@ -34,6 +34,7 @@ for (let button of buttonList) {
 
 function immissione(dato) {
     let curValue = p.value
+ 
     switch (dato) {
         case '+':
         case '-':
@@ -61,9 +62,9 @@ function immissione(dato) {
             calcola()
             break
         default:
-            if (p.value =="0") {
+            if (p.value == "0") {
                 p.value = dato
-            }else {
+            } else {
                 p.value += dato
             }
     }
@@ -71,9 +72,10 @@ function immissione(dato) {
 
 function cancella() {
     p.value = ""
+    previous.value = ""
 }
 
 function calcola() {
     previous.value = p.value
-    p.value = "= "+math.evaluate(p.value)
+    p.value = eval(p.value)
 }
